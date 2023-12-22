@@ -1,7 +1,5 @@
 from utils import engine
 
-
-
 # Testar a conexão
 def criar_conexao():
     try:
