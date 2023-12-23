@@ -43,6 +43,9 @@ def extrair_dados():
                             if ('Nº DO CLIENTE' in c):
                                 numero_cliente = c
                                 numero_cliente = numero_cliente.split('\n')[1]
+                            elif ('Referente a' in c):
+                                mes = c
+                                mes = mes.split('\n')[1].split(' ')[0]
 
             dados = {
                 'scee': {
@@ -59,7 +62,9 @@ def extrair_dados():
                     'valor_total': float(energe[1].replace(',', '.'))
                 },
                 'nota': nota,
-                'numero_cliente': numero_cliente
+                'numero_cliente': numero_cliente,
+                'caminho': novo_dir,
+                'mes': mes
             }
 
             nova_fatura = Nota(scee_kwh=dados['scee']['kWh'],
@@ -70,11 +75,13 @@ def extrair_dados():
                                energia_kwh=dados['energe']['kWh'],
                                energia_valor_total=dados['energe']['valor_total'],
                                nota=dados['nota'],
-                               numero_cliente=dados['numero_cliente']
+                               numero_cliente=dados['numero_cliente'],
+                               caminho=dados['caminho'],
+                               mes=dados['mes']
                                )
             if (len(notas) > 0):
-                if(nova_fatura.nota in numeros):
-                   continue
+                if (nova_fatura.nota in numeros):
+                    continue
                 else:
                     session.add(nova_fatura)
                     session.commit()

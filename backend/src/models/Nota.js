@@ -30,6 +30,12 @@ const Nota = sequelize.define('notas', {
     numero_cliente: {
         type: DataTypes.STRING
     },
+    caminho: {
+        type: DataTypes.STRING
+    },
+    mes: {
+        type: DataTypes.STRING
+    }
 }, {
     tableName: 'notas',
     primaryKey: 'id',

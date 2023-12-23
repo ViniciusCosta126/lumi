@@ -18,5 +18,7 @@ class Nota(Base):
     energia_valor_total = Column(Float)
     nota = Column(String)
     numero_cliente = Column(String)
+    caminho = Column(String)
+    mes = Column(String)
 
 Base.metadata.create_all(engine)
