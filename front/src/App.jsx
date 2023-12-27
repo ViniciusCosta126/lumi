@@ -1,8 +1,13 @@
+import NavBar from "./components/NavBar"
+import { Routes } from "./routes"
+
 function App() {
   return (
     <>
       <div>
-        <h1>Hello</h1>
+        <Routes>
+          
+        </Routes>
       </div>
     </>
   )
