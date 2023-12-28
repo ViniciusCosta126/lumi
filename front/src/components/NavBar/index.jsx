@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
 import './main.scss'
 import { Link } from 'react-router-dom';
 const NavBar = () => {
-
-
     window.addEventListener('resize', () => {
         const header = document.querySelector('.header');
         if(header){
@@ -13,7 +11,6 @@ const NavBar = () => {
         }
 
     })
-
     const toggleHeader = (e) => {
         const header = document.querySelector('.header');
         header.classList.toggle('header--active');

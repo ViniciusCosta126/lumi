@@ -1,15 +1,14 @@
-import React from 'react'
+
 import './main.scss'
 const Card = ({ dado }) => {
 
   const downloadFatura = (caminho)=>{
-
     var linkDownload = document.createElement('a')
     linkDownload.href = caminho
     linkDownload.download= dado.nota
     linkDownload.click()
-    console.log(caminho)
   }
+  
   return (
     <div className='card'>
       <p>Fatura: {dado.nota}</p>

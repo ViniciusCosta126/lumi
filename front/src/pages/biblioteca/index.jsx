@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import api from '../../utils/axios'
 import NavBar from '../../components/NavBar'
 import './main.scss'
