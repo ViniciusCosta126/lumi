@@ -25,9 +25,9 @@ const NavBar = () => {
         <header className="header">
             <div className="container">
                 <div className="header__body">
-                    <a href="#" className="header__logo">
+                    <Link to={'/'} className="header__logo">
                         <img src="https://i.postimg.cc/WbdvF6h2/logo2.png" alt="Logo" />
-                    </a>
+                    </Link>
                     <nav className="header__menu">
                         <ul className="header__list">
                             <li className="header__item">

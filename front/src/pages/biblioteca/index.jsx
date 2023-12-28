@@ -65,7 +65,6 @@ const Biblioteca = () => {
         <div>
             <NavBar />
             <main className='content'>
-
                 <div className='filter'>
                     <div className="container-select">
                         <p>Nº do Cliente</p>
